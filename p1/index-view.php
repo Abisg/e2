@@ -9,11 +9,13 @@
 
 <body>
 
-    <h1>Project 1</h1>
+    <h1>Project 1 - Unscramble the Word</h1>
 
     <h2>Game Mechanics</h2>
     <ul>
-        <li>...</li>
+        <li>Computer shows a scrambled word</li>
+        <li>Player A & B have a chance to guess the word</li>
+        <li>The player who guesses the correct word wins!</li>
     </ul>
 
     <h2>Results</h2>
