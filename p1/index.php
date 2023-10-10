@@ -4,27 +4,18 @@ $words = [
     'community',
     'develop',
     'environment',
-    'excellent',
-    'vehicle'
+    'excellent'
 ];
 //Random scrambled word 
-$randomIndex = $words[array_rand($words)];
+$randomWord = $words[array_rand($words)];
 
-// Split words into charaters
-$characters = str_shuffle($randomIndex);
+$randomWordForPerson = $words[array_rand($words)];
 
-echo '"Scrambled Word is: " $characters';
-
-// Associate players & guesses
-$playerA = 'Player A';
-$playerB = 'Player B';
-
-$guessA = '';
-$guessB = '';
-
-
-var_dump($randomIndex);
-
-
+// Associate players/guesses 
+if ($randomWordForPerson == $randomWord) {
+    $correct = true;
+} else {
+    $correct = false;
+};
 
 require 'index-view.php';

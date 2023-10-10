@@ -9,18 +9,26 @@
 
 <body>
 
-    <h1>Project 1 - Unscramble the Word</h1>
+    <h1>Project 1 - Guess the Word</h1>
 
     <h2>Game Mechanics</h2>
     <ul>
         <li>Computer shows a scrambled word</li>
         <li>Player A & B have a chance to guess the word</li>
-        <li>The player who guesses the correct word wins!</li>
+        <li>The first player to guess the correct word wins!</li>
     </ul>
 
     <h2>Results</h2>
     <ul>
-        <li>Scrambled word is: <?php echo $characters ?></li>
+        <li>Correct answer is: <?php echo $randomWord ?>
+        </li>
+        <li>Player chose: <?php echo $randomWordForPerson ?> !
+        </li>
+        <?php if ($correct) { ?>
+        <li>They win!</li>
+        <?php    } else { ?>
+        <li>They lose:(</li>
+        <?php } ?>
     </ul>
 
 </body>
