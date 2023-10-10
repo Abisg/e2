@@ -8,12 +8,12 @@ $words = [
     'vehicle'
 ];
 //Random scrambled word 
-$randomIndex = array_rand($words);
-$word = $words[$randomIndex];
+$randomIndex = $words[array_rand($words)];
 
 // Split words into charaters
-$characters = str_split($word);
-shuffle($characters);
+$characters = str_shuffle($randomIndex);
+
+echo '"Scrambled Word is: " $characters';
 
 // Associate players & guesses
 $playerA = 'Player A';
@@ -21,6 +21,7 @@ $playerB = 'Player B';
 
 $guessA = '';
 $guessB = '';
+
 
 var_dump($randomIndex);
 

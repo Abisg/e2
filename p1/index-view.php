@@ -20,7 +20,7 @@
 
     <h2>Results</h2>
     <ul>
-        <li>...</li>
+        <li>Scrambled word is: <?php echo $characters ?></li>
     </ul>
 
 </body>
