@@ -31,13 +31,17 @@
             <ul>
                 <li>Correct answer is: <?php echo $randomWord ?>
                 </li>
+            </ul>
 
+            <ul>
                 <li>Player A chose: <?php echo $randomWordForPlayerA ?>
                 </li>
 
                 <li>Player B chose: <?php echo $randomWordForPlayerB ?>
                 </li>
+            </ul>
 
+            <ul>
                 <?php if ($correctA) { ?>
                     <li>Player A wins!</li>
 
@@ -51,7 +55,6 @@
                 <?php } else { ?>
                     <li>Player B loses:(</li>
                 <?php } ?>
-
             </ul>
         </nav>
     </main>
