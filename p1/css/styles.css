@@ -3,9 +3,13 @@
 body {
     margin: 0;
     background-color: #82A0D8;
-    text-align: center;
+
 }
 
 header {
     font-family: 'Pixelify Sans';
+}
+
+h2 {
+    text-decoration: underline;
 }

@@ -1,24 +1,26 @@
 <?php
-//array of strings
+
 $words = [
     'community',
     'develop',
     'environment',
     'excellent'
 ];
-//Random scrambled word 
+//Picks random word from array
 $randomWord = $words[array_rand($words)];
 
+//Create random word for each person
 $randomWordForPlayerA = $words[array_rand($words)];
 $randomWordForPlayerB = $words[array_rand($words)];
 
-// Associate players/guesses 
+//Boolean for Player A chances
 if ($randomWordForPlayerA == $randomWord) {
     $correctA = true;
 } else {
     $correctA = false;
 };
 
+//Boolean for Player B chances
 if ($randomWordForPlayerB == $randomWord) {
     $correctB = true;
 } else {

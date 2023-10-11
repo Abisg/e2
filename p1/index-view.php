@@ -32,29 +32,25 @@
                 <li>Correct answer is: <?php echo $randomWord ?>
                 </li>
 
-                <li>Player A chose: <?php echo $randomWordForPlayerA ?>!
+                <li>Player A chose: <?php echo $randomWordForPlayerA ?>
                 </li>
 
-                <li>Player B chose: <?php echo $randomWordForPlayerB ?>!
+                <li>Player B chose: <?php echo $randomWordForPlayerB ?>
                 </li>
-
-                <hr />
 
                 <?php if ($correctA) { ?>
-                <li>Player A wins!</li>
+                    <li>Player A wins!</li>
 
                 <?php    } else { ?>
-                <li>Player A loses:(</li>
+                    <li>Player A loses:(</li>
                 <?php } ?>
-
 
                 <?php if ($correctB) { ?>
-                <li>Player B wins!</li>
+                    <li>Player B wins!</li>
 
                 <?php } else { ?>
-                <li>Player B loses:(</li>
+                    <li>Player B loses:(</li>
                 <?php } ?>
-
 
             </ul>
         </nav>
