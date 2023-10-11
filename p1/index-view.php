@@ -13,24 +13,40 @@
 
     <h2>Game Mechanics</h2>
     <ul>
-        <li>Computer shows a scrambled word</li>
+        <li>Computer shows a word</li>
         <li>Player A & B have a chance to guess the word</li>
-        <li>The first player to guess the correct word wins!</li>
+        <li>If they guess the correct word, they win!</li>
+        <li>If they guess the wrong word, they lose:(</li>
     </ul>
 
     <h2>Results</h2>
     <ul>
         <li>Correct answer is: <?php echo $randomWord ?>
         </li>
-        <li>Player chose: <?php echo $randomWordForPerson ?> !
+
+        <li>Player A chose: <?php echo $randomWordForPlayerA ?>!
         </li>
-        <?php if ($correct) { ?>
-        <li>They win!</li>
+
+        <li>Player B chose: <?php echo $randomWordForPlayerB ?>!
+        </li>
+
+        <hr />
+
+        <?php if ($correctA) { ?>
+        <li>Player A wins!</li>
+
         <?php    } else { ?>
-        <li>They lose:(</li>
+        <li>Player A loses:(</li>
+        <?php } ?>
+
+
+        <?php if ($correctB) { ?>
+        <li>Player B wins!</li>
+
+        <?php } else { ?>
+        <li>Player B loses:(</li>
         <?php } ?>
     </ul>
-
 </body>
 
 </html>

@@ -9,13 +9,20 @@ $words = [
 //Random scrambled word 
 $randomWord = $words[array_rand($words)];
 
-$randomWordForPerson = $words[array_rand($words)];
+$randomWordForPlayerA = $words[array_rand($words)];
+$randomWordForPlayerB = $words[array_rand($words)];
 
 // Associate players/guesses 
-if ($randomWordForPerson == $randomWord) {
-    $correct = true;
+if ($randomWordForPlayerA == $randomWord) {
+    $correctA = true;
 } else {
-    $correct = false;
+    $correctA = false;
 };
+
+if ($randomWordForPlayerB == $randomWord) {
+    $correctB = true;
+} else {
+    $correctB = false;
+}
 
 require 'index-view.php';
