@@ -18,58 +18,33 @@
     <main>
         <h2>Instructions</h2>
 
-        <nav>
-            <ul>
-                <li>It's your chance to guess the correct word</li>
-                <li>Click "Guess" to find out if you guessed correctly</li>
-            </ul>
+        <ul>
+            <li>It's your chance to guess the correct word</li>
+            <li>Click "Guess" to find out if you guessed correctly</li>
+        </ul>
 
-            <form method="POST" action="process.php">
+        <form method="POST" action="process.php">
 
-                <input type="radio" id="community" name="choice" value="community" checked><label
-                    for="community">Community</label>
-                <input type="radio" id="develop" name="choice" value="develop"><label for="develop">Develop</label>
-                <input type="radio" id="environment" name="choice" value="environment"><label
-                    for="environment">Environment</label>
-                <input type="radio" id="excellent" name="choice" value="excellent"><label
-                    for="excellent">Excellent</label>
+            <input type="radio" id="community" name="choice" value="community"><label for="community">Community</label>
+            <input type="radio" id="develop" name="choice" value="develop"><label for="develop">Develop</label>
+            <input type="radio" id="environment" name="choice" value="environment"><label
+                for="environment">Environment</label>
+            <input type="radio" id="excellent" name="choice" value="excellent"><label for="excellent">Excellent</label>
 
-                <button type="submit">Guess</button>
-            </form>
+            <button type="submit">Guess</button>
+        </form>
 
-            <h2>Results</h2>
+        <?php if (isset($results)) { ?>
+        <h2>Results</h2>
 
-
-
-            <ul>
-                <li>Correct answer is: <?php echo $randomWord ?>
-                </li>
-            </ul>
-
-            <ul>
-                <li>Player A chose: <?php echo $randomWordForPlayerA ?>
-                </li>
-
-                <li>Player B chose: <?php echo $randomWordForPlayerB ?>
-                </li>
-            </ul>
-
-            <ul>
-                <?php if ($correctA) { ?>
-                <li>Player A wins!</li>
-
-                <?php    } else { ?>
-                <li>Player A loses:(</li>
-                <?php } ?>
-
-                <?php if ($correctB) { ?>
-                <li>Player B wins!</li>
-
-                <?php } else { ?>
-                <li>Player B loses:(</li>
-                <?php } ?>
-            </ul>
-        </nav>
+        <?php if ($winner) { ?>
+        Congrats! You won! You chose <?php echo $guess ?>!
+        <?php } else if (empty($choice)) { ?>
+        Please guess a word.
+        <?php } else { ?>
+        Correct answer was <?php echo $guess; ?>. Please try again.
+        <?php } ?>
+        <?php } ?>
     </main>
 </body>
 
