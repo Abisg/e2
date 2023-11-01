@@ -4,9 +4,9 @@ session_start();
 
 $choice = $_POST['choice'];
 
-$guess = guessWord(); # Guesses one word
+$guess = guessWord();
 
-$winner = $choice == $guess; # if/else statement
+$winner = $choice == $guess;
 
 function guessWord()
 {
