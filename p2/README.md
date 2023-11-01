@@ -16,6 +16,7 @@
 **New Resources**
 + _[Empty Validation Info](https://www.php.net/manual/en/function.empty)_
 + _[Else If Statement Blog](https://www.codecademy.com/forum_questions/51461bd65e90f4eda1007271)_
++ _[Removing Arrow in Summary Tag](https://www.fabiofranchino.com/log/how-to-hide-the-arrow-in-the-summary-tag-in-details-tag/)_
 
 ## Notes for instructor
 n/a
