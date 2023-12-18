@@ -6,7 +6,7 @@
 
 @section('content')
     @if ($reviewSaved)
-        <div class="alert alert-success">Thank you, your review was submitted!</div>
+        <div test='review-confirmation' class="alert alert-success">Thank you, your review was submitted!</div>
     @endif
 
     @if ($app->errorsExist())
@@ -22,7 +22,8 @@
             {{ $product['description'] }}
         </p>
 
-        <div class='product-price'>${{ $product['price'] }}</div>
+        <div test="product-price" class='product-price {{ $product['price'] < 10 ? 'product-price-sale' : 'product-price' }}'>
+            ${{ $product['price'] }}</div>
     </div>
 
     <form method='POST' id='product-review' action='/products/save-review'>
@@ -31,16 +32,17 @@
         <input type='hidden' name='sku' value='{{ $product['sku'] }}'>
         <div class='form-group'>
             <label for='name'>Name</label>
-            <input type='text' class='form-control' name='name' id='name' value="{{ $app->old('name') }}">
+            <input test='reviewer-name-input' type='text' class='form-control' name='name' id='name'
+                value="{{ $app->old('name') }}">
         </div>
 
         <div class='form-group'>
             <label for='review'>Review</label>
-            <textarea name='review' id='review' class='form-control'>{{ $app->old('review') }}</textarea>
+            <textarea test='review-textarea' name='review' id='review' class='form-control'>{{ $app->old('review') }}</textarea>
             (Min: 200 characters)
         </div>
 
-        <button type='submit' class='btn btn-primary'>Submit Review</button>
+        <button test='review-submit-button' type='submit' class='btn btn-primary'>Submit Review</button>
     </form>
 
     @if ($app->errorsExist())
@@ -60,8 +62,8 @@
 
         @foreach ($reviews as $review)
             <div class="review">
-                <div class="review-name">{{ $review['name'] }}</div>
-                <div class="review-content">{{ $review['review'] }}</div>
+                <div test='review-name' class="review-name">{{ $review['name'] }}</div>
+                <div test='review-content' class="review-content">{{ $review['review'] }}</div>
             </div>
         @endforeach
     </div>
