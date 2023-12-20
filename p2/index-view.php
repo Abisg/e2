@@ -49,7 +49,7 @@
 
     <?php if ($winner) { ?>
     <p>🎉Congrats! You won! You chose <?php echo $guess ?>!</p>
-    <?php } else if (empty($choice)) { ?>
+    <?php } elseif (empty($choice)) { ?>
     <p>Please guess a word.</p>
     <?php } else { ?>
     <p>❌Correct answer was <?php echo $guess; ?>. Please try again.</p>

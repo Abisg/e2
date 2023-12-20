@@ -7,7 +7,7 @@
 + [ ] I am taking this course for undergraduate credit and have opted out of integrating testing into my application
 
 ## Outside resources
-n/a
++ _[Logo](https://www.ctpublic.org/game/word-encounters)_
 
 ## Notes for instructor
 n/a

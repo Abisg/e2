@@ -1,3 +1,49 @@
+body {
+    text-align: center;
+}
+
 #logo {
-    width:300px;
+    width: 300px;
+}
+
+.answer {
+    font-weight: bold;
+}
+
+.won {
+    color: green;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.lost {
+    color: red;
+    display: inline-block;
+    font-weight: bold;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.submit-btn {
+    border-color: orange;
+    background-color: #e6b037;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #7586ED;
+    border-color: #3287EC;
+    transition: all .5s ease-in-out;
 }

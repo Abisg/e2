@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang='en'>
+
 <head>
 
     <title>@yield('title', $app->config('app.name'))</title>
@@ -13,18 +14,21 @@
     @yield('head')
 
 </head>
+
 <body>
 
-<header>
-    <img id='logo' src='/images/hes-logo.png' alt='Harvard Extension School Logo'>
-    <h1>{{ $app->config('app.name') }}</h1>
-</header>
+    <header>
+        <a href="/">
+            <img id="logo" src= '/images/Guess-the-word-title.png' alt="The Game logo">
+        </a>
+    </header>
 
-<main>
-    @yield('content')
-</main>
+    <main>
+        @yield('content')
+    </main>
 
-@yield('body')
+    @yield('body')
 
 </body>
+
 </html>
