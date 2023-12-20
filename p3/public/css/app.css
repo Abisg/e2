@@ -12,18 +12,46 @@ body {
 
 .won {
     color: green;
-    display: inline-block;
+    display: block;
     font-weight: bold;
 }
 
 .lost {
     color: red;
-    display: inline-block;
+    display: block;
     font-weight: bold;
 }
 
 form {
     margin-bottom: 30px;
+}
+
+.error-alert-alert-danger {
+    color: red;
+    font-weight: bold;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    margin-right: 40px;
+}
+
+a {
+    color: black;
+    margin-left: 20px;
+}
+
+a:hover {
+    color: #7586ED;
 }
 
 input {

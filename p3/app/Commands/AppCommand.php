@@ -6,6 +6,13 @@ use Faker\Factory;
 
 class AppCommand extends Command
 {
+    public function fresh()
+    {
+
+        $this->migrate();
+        $this->seed();
+    }
+
     public function migrate()
     {
 
@@ -36,8 +43,10 @@ class AppCommand extends Command
             $this->app->db()->insert('rounds', [
                 'choice' => $words[array_rand($words)],
                 'result' => rand(0, 1),
-                'timestamp' => $faker->dateTimeBetween('-' . $i . 'days', '-' . $i . 'days')->format('Y-m-d H:i:s')
+                'timestamp' => $faker->dateTimeBetween('-' . $i . 'days', '-' . $i . 'days')->format('Y-m-d H:i:s') #Faker Date Time
             ]);
         }
+        dump('Seeds complete!');
+
     }
 }

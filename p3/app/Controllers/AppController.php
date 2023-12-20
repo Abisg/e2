@@ -35,11 +35,10 @@ class AppController extends Controller
                'excellent'
            ];
 
-        $correct = $words[array_rand($words)];
+        $correct = $words[array_rand($words)]; #The correct word
 
-        $result = $choice == $correct;
+        $result = $choice == $correct; #Boolean value
 
-        # To do: persist round details to the database
         $this->app->db()->insert('rounds', [
             'choice' => $choice,
             'result' => $result ? 1 : 0,
@@ -58,11 +57,18 @@ class AppController extends Controller
 
     public function history()
     {
-        return $this->app->view('history');
+        $rounds = $this->app->db()->all('rounds');
+
+        return $this->app->view('history', ['rounds' => $rounds ]);
     }
 
     public function round()
     {
-        return $this->app->view('round');
+        $id = $this->app->param('id');
+
+        $round = $this->app->db()->findById('rounds', $id);
+
+
+        return $this->app->view('round', ['round' => $round]);
     }
 }
